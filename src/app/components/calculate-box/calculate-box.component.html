@@ -1,0 +1,39 @@
+<div class="closeButton">
+    <button class="button" (click)="closeDialog()">
+        <mat-icon aria-hidden="false">close</mat-icon>
+    </button>
+</div>
+
+<div class="title" mat-dialog-title>CALCULATE</div>
+<div class="subtitle" mat-dialog-title>Please enter the purchase amount.</div>
+
+<div mat-dialog-content>
+    <div *ngIf="indicators" class="spinner_container">
+        <mat-spinner></mat-spinner><br>
+        <span style="color: rgb(11, 33, 235);">Loading loan conditions...</span>
+    </div>
+    <form [formGroup]="formGroup">
+        <mat-form-field appearance="fill">
+            <mat-label>Purchase amount (min 50 €, max 5.000 €)</mat-label>
+            <input matInput formControlName="amount">
+            <span matSuffix>€&nbsp;</span>
+            <mat-error *ngIf="handleError('amount', 'required')" style="font-family: SourceSansPro;">
+                You must provide purchase amount!
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Optional: please select loan conditions</mat-label>
+            <mat-select formControlName="vendorProductCode">
+                <mat-option [value]="" style="font-family: SourceSansPro;font-size: 14px;">None</mat-option>
+                <mat-option *ngFor="let loan of products" [value]="loan.code"
+                    style="font-family: SourceSansPro;font-size: 14px;">
+                    {{loan.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div mat-dialog-actions>
+            <button class="calculateButton" mat-raised-button (click)="calculate(formGroup.value)"
+                [disabled]="!formGroup.valid">CALCULATE</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,8 @@
+{
+    "/api": {
+        "target": "https://svendor.leanpay.si",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}

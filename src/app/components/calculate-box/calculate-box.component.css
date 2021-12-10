@@ -1,0 +1,149 @@
+.title {
+    font-family: SourceSansPro;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #354052;
+}
+
+.subtitle {
+    font-family: SourceSansPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(53, 64, 82, 0.87);
+}
+
+@media screen and (max-width: 500px) { 
+    .subtitle {
+        margin-bottom: 110px;
+    }
+}
+
+.button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+:host ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: transparent !important;
+}
+
+:host ::ng-deep .mat-form-field-label {
+    font-family: SourceSansPro;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #8f9db0;
+}
+
+@media screen and (max-width: 500px) { 
+    :host ::ng-deep .mat-form-field-label {
+        font-size: 12px;
+    }
+}
+
+:host ::ng-deep .mat-form-field-suffix {
+    font-family: SourceSansPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgba(53, 64, 82, 0.87);
+}
+
+.mat-input-element {
+    font-family: SourceSansPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgba(53, 64, 82, 0.87);
+}
+
+:host ::ng-deep .mat-select-value {
+    font-family: SourceSansPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgba(53, 64, 82, 0.87);
+}
+
+:host ::ng-deep .mat-select-panel{
+    color: red;
+}
+
+.mat-dialog-actions {
+    justify-content: center;
+    margin-top: 20%;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 500px) { 
+    .mat-dialog-actions {
+        margin-top: 50%;
+    }
+}
+
+.calculateButton {
+    height: 40px;
+    background-color: #ff786e;
+    font-family: SourceSansPro;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
+
+.closeButton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.spinner_container {
+    border-radius: 10px;
+    height: 100px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    opacity: 1;
+}
+
+:host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {   
+    stroke: rgb(11, 33, 235);
+}
+
+:host ::ng-deep .mat-progress-spinner {   
+    margin: auto;
+}

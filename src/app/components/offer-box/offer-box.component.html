@@ -1,0 +1,91 @@
+<div class="buttons">
+    <button class="button" (click)="back()">
+        <mat-icon aria-hidden="false">keyboard_backspace</mat-icon>
+    </button>
+    <button class="button" (click)="closeDialog()">
+        <mat-icon aria-hidden="false">close</mat-icon>
+    </button>
+</div>
+<div class="title" mat-dialog-title>CALCULATE</div>
+<div class="subtitle" mat-dialog-title>Please choose installment</div>
+
+<div class="installment">
+
+    <div class="choose">
+        <label class="label">Choose installment</label>
+        <div class="choose_box">
+            <div class="choose_installment" *ngFor="let installment of payment_plan_data;let i=index"
+                [class.active]='selectedIndex === i' (click)="setIndex(i)">
+                <span>{{installment.installmentAmount | number : '1.2-2'}}€</span>
+                <span style="margin-left: 5px;margin-right: 5px;">x</span>
+                <span>{{installment.numberOfInstallments}} mesecev</span>
+            </div>
+        </div>
+        <div class="info">
+            This information is non-binding and may change. 17th in the month is assumed as the instalment payment date.
+            Exact calculations will be made and presented in the user loan application process.
+        </div>
+    </div>
+
+    <div class="details">
+        <label class="label">Details</label>
+        <div class="details_data_box">
+            <div class="details_data_box1">
+                <div class="data_title">
+                    Date of first payment:
+                </div>
+                <div class="data_title">
+                    Purchase value:
+                </div>
+                <div class="data_title">
+                    Interest rate:
+                </div>
+                <div class="data_title">
+                    Approval costs:
+                </div>
+                <div class="data_title">
+                    Risk assessment costs:
+                </div>
+                <div class="data_title">
+                    Contractual interest:
+                </div>
+                <div class="data_title">
+                    EOM:
+                </div>
+                <div class="data_title">
+                    Total payment:
+                </div>
+            </div>
+            <div class="details_data_box2">
+                <div class="data_value">
+                    {{formated_date}}
+                </div>
+                <div class="data_value">
+                    {{purchase_value | number : '1.2-2'}} €
+                </div>
+                <div class="data_value">
+                    {{interest_rate | number : '1.2-2'}} %
+                </div>
+                <div class="data_value">
+                    {{approval_costs | number : '1.2-2'}} €
+                </div>
+                <div class="data_value">
+                    {{ risk_assessment_costs | number : '1.2-2'}} €
+                </div>
+                <div class="data_value">
+                    {{ contractual_interest | number : '1.2-2'}} €
+                </div>
+                <div class="data_value">
+                    {{ eom | number : '1.2-2'}} %
+                </div>
+                <div class="data_value">
+                    {{ total_payment | number : '1.2-2'}} €
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="createOffer">
+    <button mat-flat-button class="createOfferButton">CREATE OFFER</button>
+</div>

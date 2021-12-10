@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.my-class .mat-dialog-container{
+    height: 468px;
+    width: 488px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+@media screen and (max-width: 500px) { 
+    .my-class .mat-dialog-container {
+        width: 339px;
+        height: 612px;
+    }
+}
+
+.my-class2 .mat-dialog-container{
+    width: 1024px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) { 
+    .my-class2 .mat-dialog-container {
+        width: 720px;
+        height: 638px;
+    }
+}
